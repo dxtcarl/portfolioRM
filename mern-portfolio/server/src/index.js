@@ -55,7 +55,7 @@ app.use((err, req, res, next) => {
 // Start server
 connectDB()
   .then(() => {
-    app.listen(PORT, () => {
+    app.listen(PORT, '0.0.0.0', () => {
       console.log(`🚀 Server running on http://localhost:${PORT}`);
       console.log(`📁 Client origin: ${CLIENT_ORIGIN}`);
     });
